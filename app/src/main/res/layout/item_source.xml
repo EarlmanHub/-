@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingRight="30dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/tv_source_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起点中文网"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_source_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_source_title"
+        android:text="www.qidian.com"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:id="@+id/tv_is_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/iv_right_arrow"
+        android:text="(官方付费阅读)"
+        android:textColor="@color/red" />
+
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/game_right_arrow" />
+
+    <TextView
+        android:id="@+id/tv_recent_updata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_source_link"
+        android:layout_marginTop="2dp"
+        android:text="@string/recent_chapter"
+        android:textColor="@color/gray" />
+</RelativeLayout>

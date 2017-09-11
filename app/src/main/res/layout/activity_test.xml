@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.guashu.book.ui.activity.YYBTestActivity">
+
+    <Button
+        android:id="@+id/checkSelfUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="checkSelfUpdate" />
+
+    <Button
+        android:id="@+id/startSelfUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="startSelfUpdate" />
+
+    <Button
+        android:id="@+id/checkYYBInstallState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="checkYYBInstallState" />
+
+</LinearLayout>

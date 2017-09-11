@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guashu.book">
+
+    <uses-sdk android:minSdkVersion="8"></uses-sdk>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".ReaderApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BookDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ReadActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.BookSourceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.ReadPDFActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.ReadEPubActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/epub+zip" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.ReadCHMActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/mshelp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScanLocalBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WifiBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SubRankActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.DownloadBookService" />
+
+        <activity android:name=".ui.activity.DisclaimerActivity" />
+        <activity android:name=".ui.activity.AboutUsActivity" />
+        <activity android:name=".ui.activity.YYBTestActivity" />
+
+        <activity android:name=".ui.activity.AppUpdataActivity" />
+
+        <service
+            android:name=".service.DownloadApkService"
+            android:exported="false"></service>
+
+
+        <meta-data android:value="59816e7cf43e482a37001274" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="0x0001" android:name="UMENG_CHANNEL"/>
+    </application>
+
+</manifest>
